@@ -1,0 +1,25 @@
+id,nombre,genero,edad,distrito,vida,fuerza,estado
+1,Glimmer,mujer,17,1,300,250,TRUE
+2,Marvel,hombre,17,1,350,275,TRUE
+3,Clove,mujer,14,2,250,250,TRUE
+4,Cato,hombre,15,2,250,250,TRUE
+5,Annie,mujer,13,3,200,200,TRUE
+6,Patrick,hombre,13,3,300,200,TRUE
+7,Jenny	,mujer,17,4,300,200,TRUE
+8,Cocuber,hombre,18,4,200,200,TRUE
+9,Comadreja,mujer,17,5,275,275,TRUE
+10,Tejon,hombre,18,5,280,300,TRUE
+11, Tamora,mujer,15,6,200,200,TRUE
+12,Jason,hombre,16,6,225,275,TRUE
+13,Leigha,mujer,17,7,200,300,TRUE
+14,Sam,hombre,17,7,270,220,TRUE
+15,Mackenzie,mujer,16,8,270,200,TRUE
+16,Tan,hombre,18,8,250,260,TRUE
+17,Annie,mujer,14,9,220,240,TRUE
+18,Imanol,hombre,13,9,230,230,TRUE
+19,Dakota,mujer,16,10,210,220,TRUE
+20,Jeremy,hombre,18,10,280,250,TRUE
+21,Rue,mujer,12,11,210,210,TRUE
+22,Thresh,hombre,18,11,220,310,TRUE
+23,Katniss,mujer,16,12,350,350,TRUE
+24,Peeta,hombre,16,12,350,340,TRUE
