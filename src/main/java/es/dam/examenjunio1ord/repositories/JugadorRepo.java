@@ -67,7 +67,7 @@ public class JugadorRepo implements IJugadorRepo {
             return Optional.of(new Jugador(
                     result.getInt("id"),
                     result.getString("nombre"),
-                    result.getString("mujer"),
+                    result.getString("genero"),
                     result.getInt("edad"),
                     result.getInt("distrito"),
                     result.getInt("vida"),
@@ -129,7 +129,8 @@ public class JugadorRepo implements IJugadorRepo {
             dataBaseManager.open();
             String query = "delete from tributos where id = ?";
             dataBaseManager.delete(query, entity.getId());
-            jugadores.remove(entity);
+            var jugador = jugadores.stream().filter(i -> i.getId() == (entity.getId())).findFirst();
+            jugador.ifPresent(value -> jugadores.remove(value));
         } catch (SQLException ignored) {
             ignored.printStackTrace();
 

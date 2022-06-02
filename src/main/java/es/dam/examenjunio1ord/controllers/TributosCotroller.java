@@ -144,6 +144,7 @@ public class TributosCotroller {
     }
 
     public void iniciar(ActionEvent event) {
+        //Inizializar
         if (mapaSize.getSelectionModel().getSelectedItem() == null) {
             var alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Selecciona una dimension");
@@ -168,7 +169,7 @@ public class TributosCotroller {
             items.setItem(random, random2, capitolio.getItem());
         }
 
-        output.appendText("\n colocando jugaores en el mapa");
+        output.appendText("\n colocando jugadores en el mapa");
 
         for (Jugador jugador : repository.findAll()) {
             int random;
@@ -178,14 +179,23 @@ public class TributosCotroller {
                 random2 = new Random().nextInt(items.getSize());
             }
             while (!items.setJugador(random, random2, jugador));
-            output.appendText("\n Colocado jugaddor " + jugador.getName() + " en el mapa");
+            output.appendText("\n Colocado jugador " + jugador.getName() + " en el mapa");
         }
 
-        while (!items.isOnePlayer()) {
-            ;
-            repository.delete(repository.findById(1).get());
-            //Simulacion
+        //Reactividad
+
+        //se busca a annie y se borra si esta
+        var jugador = repository.findById(5);
+        if (jugador.isPresent()) {
+            repository.delete(jugador.get());
+            jugadorTableView.refresh();
         }
+
+
+    /*while (!items.isOnePlayer()) {
+
+        //Simulacion
+    }*/
 
 
     }
