@@ -12,9 +12,12 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 public class JuegosHambreApp extends Application {
+    public static Stage mainStage;
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(JuegosHambreApp.class.getResource("tributos-view.fxml"));
+        mainStage = stage;
+        FXMLLoader fxmlLoader = new FXMLLoader(JuegosHambreApp.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 520);
         stage.setTitle("Juegos del Hambre");
         stage.setScene(scene);

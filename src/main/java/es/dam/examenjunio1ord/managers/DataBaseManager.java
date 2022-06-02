@@ -13,7 +13,7 @@ import java.util.Optional;
  * @author Jose Luis González Sánchez
  * @version 1.0
  */
-public class DataBaseManager {
+public class DataBaseManager implements AutoCloseable {
     private static DataBaseManager controller;
     private final String APP_PATH = System.getProperty("user.dir");
     private final String DB_DIR = APP_PATH + File.separator + "db";
