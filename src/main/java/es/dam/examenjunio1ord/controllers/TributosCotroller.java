@@ -163,7 +163,7 @@ public class TributosCotroller {
 
         output.appendText("\n cargando items del mapa");
 
-        for (int i = 0; i < items.getSize(); i++) {
+        for (int i = 0; i < 10; i++) {
             var random = new Random().nextInt(items.getSize());
             var random2 = new Random().nextInt(items.getSize());
             items.setItem(random, random2, capitolio.getItem());
