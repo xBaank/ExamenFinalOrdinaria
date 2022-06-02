@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Locale;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -115,6 +116,14 @@ public class TributosCotroller {
                 stringBuilder.append("Genero ").append(i).append(": \n");
                 stringBuilder.append(b).append("\n");
             });
+
+            stringBuilder.append("\n");
+
+
+            var muertos = list.stream().filter(i -> i.getEstado().toLowerCase(Locale.ROOT).equals("false") || i.getVida() == 0).collect(Collectors.toList());
+            stringBuilder.append("Muertos \n");
+
+            stringBuilder.append(muertos);
 
             stringBuilder.append("\n");
 
